@@ -20,7 +20,7 @@ else:
     exit()
 
 # Read contract ABI
-with open('C:\\Users\\yuan\\votestorage\\build\\contracts\\VoteStorage.json', 'r', encoding='utf-8') as f:
+with open('\\votestorage\\build\\contracts\\VoteStorage.json', 'r', encoding='utf-8') as f:
     contract_json = json.load(f)
     contract_abi = contract_json['abi']
 
