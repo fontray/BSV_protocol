@@ -9,17 +9,17 @@ contract VoteStorage {
 
     Vote[] private votes;
 
-    /// @dev store votes
+    /// store votes
     function storeVote(bytes memory _signature, bytes memory _randomNumber) public {
         votes.push(Vote(_signature, _randomNumber));
     }
 
-    /// @dev get votes total number
+    /// get votes total number
     function getVotesCount() public view returns (uint256) {
         return votes.length;
     }
 
-    /// @dev get vote data
+    /// get vote data
     function getVote(uint256 index) public view returns (bytes memory, bytes memory) {
         require(index < votes.length, "Index out of range");
         Vote memory vote = votes[index];
